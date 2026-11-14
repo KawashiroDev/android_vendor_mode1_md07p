@@ -1,0 +1,116 @@
+#plugin feature size
+#must have default size
+version:1.0
+ev_ratio:100   # 1 or 100
+feature_id_prv_fb:49
+feature_id_still_fb:50
+feature_id_prv_scene:51
+feature_id_prv_glory:52
+feature_id_still_glory:53
+feature_id_prv_portrait:54
+feature_id_still_portrait:55
+feature_id_prv_panorama:56
+feature_id_prv_db:57
+feature_id_still_hdr:58
+feature_id_still_night:59
+feature_id_still_mfnr:60
+feature_id_prv_ldc:61
+feature_id_still_ldc:62
+@start_id_0:0
+@start_default:1
+  full_still_img_width:4096
+  full_still_img_height:3072
+
+  face_beauty_preview_p1_width:1280
+  face_beauty_preview_p1_height:960
+  face_beauty_preview_img_width:960
+  face_beauty_preview_img_height:720
+
+  portrait_preview_p1_width:1280
+  portrait_preview_p1_height:960
+  portrait_preview_img_width:960
+  portrait_preview_img_height:720
+
+  glory_preview_p1_width:1280
+  glory_preview_p1_height:960
+  glory_preview_img_width:960
+  glory_preview_img_height:720
+
+  panorama_preview_p1_width:1280
+  panorama_preview_p1_height:960
+  panorama_preview_img_width:960
+  panorama_preview_img_height:720
+
+  mfnr_still_prepare_width:1920
+  mfnr_still_prepare_height:1440
+
+  hdr_preview_p1_width:1280
+  hdr_preview_p1_height:960
+  hdr_still_prepare_width:1920
+  hdr_still_prepare_height:1440
+
+
+  night_still_prepare_width:2448
+  night_still_prepare_height:1840
+@end_default
+@end_id_0
+
+@start_id_1:1
+@start_default:1
+  full_still_img_width:3264
+  full_still_img_height:2448
+
+  face_beauty_preview_p1_width:1280
+  face_beauty_preview_p1_height:960
+  face_beauty_preview_img_width:960
+  face_beauty_preview_img_height:720
+
+  portrait_preview_p1_width:1280
+  portrait_preview_p1_height:960
+  portrait_preview_img_width:960
+  portrait_preview_img_height:720
+@end_default
+@end_id_1
+
+@start_sensor_name:SENSOR_DRVNAME_OV50D40_MIPI_RAW
+@end_sensor_name
+
+@start_sensor_name:SENSOR_DRVNAME_OV8858_MIPI_RAW
+@end_sensor_name
+
+@start_sensor_name:SENSOR_DRVNAME_S5KHM6SXTWO_MIPI_RAW
+  full_still_img_width:4000
+  full_still_img_height:3000
+@end_sensor_name
+
+@start_sensor_name:SENSOR_DRVNAME_S5KGD1SPYL_MIPI_RAW
+  full_still_img_width:3280
+  full_still_img_height:2464
+  
+  mfnr_still_prepare_width:1920
+  mfnr_still_prepare_height:1440
+@end_sensor_name
+
+@start_sensor_name:SENSOR_DRVNAME_S5KHM6SX_MIPI_RAW
+  full_still_img_width:4000
+  full_still_img_height:3000
+@end_sensor_name
+
+@start_sensor_name:SENSOR_DRVNAME_S5KGD1SP_MIPI_RAW
+  full_still_img_width:3280
+  full_still_img_height:2464
+  
+  mfnr_still_prepare_width:1920
+  mfnr_still_prepare_height:1440
+@end_sensor_name
+
+@start_sensor_name:SENSOR_DRVNAME_SC820CS_MIPI_RAW
+  ldc_preview_p1_width:1280
+  ldc_preview_p1_height:960
+  ldc_preview_img_width:960
+  ldc_preview_img_height:720
+  ldc_still_crop_width:2592
+  ldc_still_crop_height:1944
+  ldc_still_prepare_width:1920
+  ldc_still_prepare_height:1440
+@end_sensor_name
