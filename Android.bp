@@ -19439,8 +19439,9 @@ dex_import {
     name: "mediatek-ims-base",
     owner: "mode1",
     jars: [
-        "proprietary/system/framework/mediatek-ims-base.jar",
+        "proprietary/system_ext/framework/mediatek-ims-base.jar",
     ],
+    system_ext_specific: true,
 }
 
 dex_import {
