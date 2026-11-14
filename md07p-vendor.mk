@@ -6,6 +6,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/mode1/md07p
 
 PRODUCT_COPY_FILES += \
+    vendor/mode1/md07p/proprietary/system_ext/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.vtservice.rc \
     vendor/mode1/md07p/proprietary/vendor/app/t6/02662e8e-e126-11e5-b86d9a79f06e9478.ta:$(TARGET_COPY_OUT_VENDOR)/app/t6/02662e8e-e126-11e5-b86d9a79f06e9478.ta \
     vendor/mode1/md07p/proprietary/vendor/app/t6/9ef77781-7bd5-4e39-965f20f6f211f400.ta:$(TARGET_COPY_OUT_VENDOR)/app/t6/9ef77781-7bd5-4e39-965f20f6f211f400.ta \
     vendor/mode1/md07p/proprietary/vendor/app/t6/b46325e6-5c90-8252-2eada8e32e5180d6.ta:$(TARGET_COPY_OUT_VENDOR)/app/t6/b46325e6-5c90-8252-2eada8e32e5180d6.ta \
@@ -971,7 +972,8 @@ PRODUCT_PACKAGES += \
     wfca \
     wmt_launcher \
     wmt_loader \
-    xcap
+    xcap \
+    vtservice
 
 PRODUCT_PACKAGES += \
     vendor_lib64_hw_gatekeeper_default_so
