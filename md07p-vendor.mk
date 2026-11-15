@@ -163,6 +163,7 @@ PRODUCT_COPY_FILES += \
     vendor/mode1/md07p/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc \
     vendor/mode1/md07p/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-mediatek.rc \
     vendor/mode1/md07p/proprietary/vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc \
+    vendor/mode1/md07p/proprietary/vendor/etc/init/android.hardware.nfc@1.2-service.slm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.nfc@1.2-service.slm.rc \
     vendor/mode1/md07p/proprietary/vendor/etc/init/android.hardware.security.keymint-service.trustkernel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.trustkernel.rc \
     vendor/mode1/md07p/proprietary/vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc \
     vendor/mode1/md07p/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
@@ -177,6 +178,7 @@ PRODUCT_COPY_FILES += \
     vendor/mode1/md07p/proprietary/vendor/etc/init/init.fmradio_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fmradio_drv.rc \
     vendor/mode1/md07p/proprietary/vendor/etc/init/init.mafp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.mafp.rc \
     vendor/mode1/md07p/proprietary/vendor/etc/init/init.md_apps.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.md_apps.rc \
+    vendor/mode1/md07p/proprietary/vendor/etc/init/init.slm.nfc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.slm.nfc.rc \
     vendor/mode1/md07p/proprietary/vendor/etc/init/init.volte_imcb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_imcb.rc \
     vendor/mode1/md07p/proprietary/vendor/etc/init/init.volte_imsm_93.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_imsm_93.rc \
     vendor/mode1/md07p/proprietary/vendor/etc/init/init.volte_md_status.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_md_status.rc \
@@ -227,6 +229,11 @@ PRODUCT_COPY_FILES += \
     vendor/mode1/md07p/proprietary/vendor/etc/ipsec/ipsec.d/cacerts/thawte.der:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/ipsec.d/cacerts/thawte.der \
     vendor/mode1/md07p/proprietary/vendor/etc/ipsec/ssl/openssl.cnf:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/ssl/openssl.cnf \
     vendor/mode1/md07p/proprietary/vendor/etc/ipsec/strongswan.conf:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/strongswan.conf \
+    vendor/mode1/md07p/proprietary/vendor/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
+    vendor/mode1/md07p/proprietary/vendor/etc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
+    vendor/mode1/md07p/proprietary/vendor/etc/libnfc-slm-560.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-slm-560.conf \
+    vendor/mode1/md07p/proprietary/vendor/etc/libnfc-slm-567.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-slm-567.conf \
+    vendor/mode1/md07p/proprietary/vendor/etc/libnfc-slm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-slm.conf \
     vendor/mode1/md07p/proprietary/vendor/etc/meow.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/meow.cfg \
     vendor/mode1/md07p/proprietary/vendor/etc/mfnr_config.yaml:$(TARGET_COPY_OUT_VENDOR)/etc/mfnr_config.yaml \
     vendor/mode1/md07p/proprietary/vendor/etc/mfnr_config_front.yaml:$(TARGET_COPY_OUT_VENDOR)/etc/mfnr_config_front.yaml \
@@ -375,6 +382,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mms@1.6-impl \
     vendor.mediatek.hardware.nvram@1.1-impl \
     vendor.mediatek.hardware.videotelephony@1.0-impl \
+    jcos_client \
     lbs_hidl_service-impl \
     libDefaultFpsActor \
     libFrameRecord \
@@ -521,6 +529,7 @@ PRODUCT_PACKAGES += \
     libncnn_64 \
     libneuron_graph_delegate.mtk \
     libneuron_platform \
+    libnfc_slm \
     libnir_neon_driver_ndk.mtk.vndk \
     libnpagent \
     libnpagent_server \
@@ -577,6 +586,7 @@ PRODUCT_PACKAGES += \
     libxapi_stitch \
     libxapi_undistort \
     libxapi_vfb \
+    ls_client \
     libwvdrmengine \
     arm.graphics-V1-ndk_platform \
     gc02m1_mipi_raw_IdxMgr \
@@ -823,6 +833,8 @@ PRODUCT_PACKAGES += \
     libpqparamparser \
     libstereoinfoaccessor_vsdof \
     libmtkcam_streaminfo_plugin-p1stt \
+    nfc_nci_slm \
+    se_extn_client \
     vendor.mediatek.hardware.apuware.apusys@2.0 \
     vendor.mediatek.hardware.apuware.apusys@2.1 \
     vendor.mediatek.hardware.apuware.hmp@1.0 \
@@ -937,6 +949,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss-service.mediatek \
     android.hardware.media.c2@1.2-mediatek-64b \
     android.hardware.neuralnetworks-shim-service-mtk \
+    android.hardware.nfc@1.2-service.slm \
     android.hardware.security.keymint-service.trustkernel \
     android.hardware.usb@1.2-service-mediatekv2 \
     android.hardware.vibrator-service.mediatek-awinic \

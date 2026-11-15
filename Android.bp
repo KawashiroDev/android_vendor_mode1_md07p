@@ -2936,6 +2936,36 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "jcos_client",
+    owner: "mode1",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/jcos_client.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libchrome",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "lbs_hidl_service-impl",
     owner: "mode1",
     strip: {
@@ -7263,6 +7293,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libnfc_slm",
+    owner: "mode1",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libnfc_slm.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libhardware",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libnir_neon_driver_ndk.mtk.vndk",
     owner: "mode1",
     strip: {
@@ -8846,6 +8904,37 @@ cc_prebuilt_library_shared {
                 "libGLESv2",
                 "libEGL",
                 "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "ls_client",
+    owner: "mode1",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/ls_client.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libchrome",
+                "libhidlbase",
+                "se_extn_client",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -16946,6 +17035,75 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "nfc_nci_slm",
+    owner: "mode1",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/nfc_nci_slm.so",
+            ],
+            shared_libs: [
+                "libshim_nfc",
+                "android.hardware.nfc@1.0",
+                "android.hardware.nfc@1.1",
+                "android.hardware.nfc@1.2",
+                "android.hardware.secure_element@1.0",
+                "libbase",
+                "libcutils",
+                "libhardware",
+                "libhardware_legacy",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "vendor.nxp.nxpese@1.0",
+                "vendor.nxp.nxpnfc@2.0",
+                "libnfc_slm",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "se_extn_client",
+    owner: "mode1",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/se_extn_client.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libchrome",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.mediatek.hardware.apuware.apusys@2.0",
     owner: "mode1",
     strip: {
@@ -20047,6 +20205,47 @@ cc_prebuilt_binary {
                 "libnativewindow",
                 "libutils",
                 "libneuralnetworks_sl_driver_mtk_prebuilt",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.nfc@1.2-service.slm",
+    owner: "mode1",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/android.hardware.nfc@1.2-service.slm",
+            ],
+            shared_libs: [
+                "nfc_nci_slm",
+                "libbase",
+                "libcutils",
+                "libhardware",
+                "liblog",
+                "libutils",
+                "android.hardware.nfc@1.0",
+                "android.hardware.nfc@1.1",
+                "android.hardware.nfc@1.2",
+                "libhidlbase",
+                "vendor.nxp.nxpese@1.0",
+                "vendor.nxp.nxpnfc@2.0",
+                "ls_client",
+                "se_extn_client",
+                "jcos_client",
+                "libmemunreachable",
                 "libc++",
                 "libc",
                 "libm",
