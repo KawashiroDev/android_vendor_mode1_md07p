@@ -19330,6 +19330,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libsource.so",
             ],
             shared_libs: [
+                "libshim_vtsource",
                 "libbinder",
                 "libcutils",
                 "libgui",
